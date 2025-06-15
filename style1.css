@@ -1,0 +1,491 @@
+/* General Body and HTML Styling */
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Modern, readable font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f8f8f8; /* Light background for a clean look */
+    color: #333; /* Darker text for readability */
+}
+
+/* --- Navigation Bar --- */
+nav {
+    background-color: #2c3e50; /* Darker header for contrast */
+    color: #fff;
+    padding: 1rem 0;
+    /* position: sticky; Keeps navigation at the top */
+    top: 0;
+    z-index: 1000; /* Ensures it stays above other content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.profile_name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.contact_info {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    color: #bbb; /* Slightly lighter contact info */
+}
+
+.contact_info img {
+    width: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.topdiv {
+    display: flex;
+    gap: 25px; /* Space between navigation links */
+}
+
+.topmenu {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.topmenu:hover {
+    color: #3498db; /* Accent color on hover */
+}
+
+/* --- Sections General Styling --- */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff; /* White background for sections */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Soft shadow */
+    margin-bottom: 30px;
+}
+
+section:first-of-type {
+    margin-top: 30px; /* Space from the header */
+}
+
+h1, h2 {
+    color: #2c3e50; /* Consistent heading color */
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/* --- About Me Section --- */
+#about-me {
+    display: flex;
+    flex-direction: column; /* Stack elements on small screens */
+    align-items: center;
+    text-align: center;
+    gap: 40px; /* Space between image and text */
+}
+
+.profile_image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    border: 5px solid #3498db; /* Accent border */
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+#about-me p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about-me h1 img {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+/* --- Skills Section --- */
+.all_skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    justify-items: center;
+    text-align: center;
+}
+
+.skill {
+    background-color: #ecf0f1; /* Lighter background for skill cards */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.skill img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.skill h6 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.skill p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* --- Projects Section --- */
+.projects-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout for projects */
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #f9f9f9; /* Slightly different background for project cards */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: #3498db; /* Accent color for project titles */
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.project-card ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+}
+
+.project-card li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.projects-container hr {
+    border: none;
+    border-top: 1px dashed #ddd; /* Dotted line separator */
+    margin: 20px 0;
+}
+
+/* --- Recommendations Section --- */
+.all_recommendations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.recommendation {
+    background-color: #ecf0f1;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    font-style: italic;
+    line-height: 1.8;
+    position: relative;
+    color: #555;
+}
+
+.recommendation span {
+    font-size: 3rem;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: #ccc; /* Subtle quote marks */
+}
+
+.recommendation span:last-of-type {
+    right: 15px;
+    left: auto;
+    bottom: 0;
+    top: auto;
+}
+
+/* --- Recommendation Form --- */
+#contact {
+    background-color: #eaf1f6; /* Light blue background for the form section */
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+#contact fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.introduction {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+#contact input[type="text"],
+#contact textarea {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+#contact textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 120px;
+}
+
+#recommend_btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#recommend_btn:hover {
+    background-color: #2980b9;
+}
+
+/* --- Scroll to Top Button --- */
+.iconbutton {
+    background-color: #3498db;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease-in-out;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    cursor: pointer;
+}
+
+.iconbutton:hover {
+    background-color: #2980b9;
+}
+
+/* */
+
+/* --- Popup Styling --- */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    z-index: 1001;
+    /* display: none; Hidden by default */
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-sizing: border-box;
+    visibility: hidden;
+}
+
+
+.popup img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.popup h3 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+.popup button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.popup button:hover {
+    background-color: #2980b9;
+}
+
+/* --- Utility Classes --- */
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear {
+    clear: both;
+}
+
+/* --- Responsive Design --- */
+@media (min-width: 768px) {
+    #about-me {
+        flex-direction: row; /* Side-by-side on larger screens */
+        text-align: left;
+    }
+
+    #about-me > div:first-child {
+        flex-shrink: 0; /* Prevent image from shrinking */
+    }
+
+    #about-me h1 {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column; /* Stack name and menu */
+        align-items: flex-start; /* Align to the left */
+    }
+
+    .profile_name {
+        margin-bottom: 15px;
+    }
+
+    .topdiv {
+        flex-direction: column; /* Stack navigation links */
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .topmenu {
+        width: 100%;
+        text-align: center; /* Center links in stacked layout */
+        padding: 5px 0;
+    }
+
+    h1, h2 {
+        font-size: 2rem;
+    }
+
+    .all_skills, .all_recommendations {
+        grid-template-columns: 1fr; /* Single column for skills and recommendations */
+    }
+
+    .skill, .recommendation {
+        margin-bottom: 20px;
+    }
+
+    .profile_image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0.8rem 0;
+    }
+
+    #home {
+        padding: 0 15px;
+    }
+
+    .profile_name {
+        font-size: 1.5rem;
+    }
+
+    .contact_info {
+        font-size: 0.8rem;
+    }
+
+    h1, h2 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    .recommendation span {
+        font-size: 2.5rem;
+    }
+
+    #contact fieldset {
+        padding: 20px;
+    }
+
+    #contact input[type="text"],
+    #contact textarea {
+        padding: 8px;
+    }
+
+    #recommend_btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .iconbutton {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .iconbutton svg {
+        width: 25px;
+        height: 25px;
+    }
+}
